@@ -23,4 +23,4 @@ cordova run android
 ```
 
 ### For debugging, use Chrome
-chrome://inspect
+[chrome://inspect](chrome://inspect)
