@@ -15,6 +15,7 @@ git clone https://github.com/seanstone/ble.git
 cd ble
 ionic state reset
 cordova platform add android
+cordova plugin add cordova-plugin-ble-central
 ```
 
 ### Build and run
