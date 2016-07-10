@@ -61,9 +61,9 @@ function dongleConnected(device)
 
 function stringToBytes(string)  // ASCII only
 {
-   var array = new Uint8Array(string.length);
-   for (var i = 0, l = string.length; i < l; i++)
-       array[i] = string.charCodeAt(i);
+    var array = new Uint8Array(string.length);
+    for (var i = 0, l = string.length; i < l; i++)
+        array[i] = string.charCodeAt(i);
     return array.buffer;
 }
 
