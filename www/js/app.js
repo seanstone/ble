@@ -4,7 +4,6 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -17,16 +16,10 @@ angular.module('starter', ['ionic'])
       // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    if(window.StatusBar) {
+    if(window.StatusBar)
       StatusBar.styleDefault();
-    }
 
-
-    ble.scan([], 5,
-        function(device){alert(JSON.stringify(device));},
-        function(device){alert("failed");}
-    );
-
-
+    // App main entry
+    main();
   });
 })
