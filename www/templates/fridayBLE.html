@@ -1,9 +1,17 @@
+<style type="text/css">
+    #messageToSend, #messageReceived
+    {
+        height: 30vh;
+    }
+</style>
+
 <ion-view title="Friday BLE" id="page1" class=" ">
     <ion-content padding="true" class="has-header">
         <div id="fridayBLE-button-bar1" class=" button-bar "></div>
         <form id="fridayBLE-form3" class="list ">
+            <span class="input-label">Message received:</span><textarea id="messageReceived"></textarea>
             <label class="item item-input " id="fridayBLE-textarea1">
-                <span class="input-label">Message:</span><textarea id="messageBox" placeholder="Hello!"></textarea>
+                <span class="input-label">Message to send:</span><textarea id="messageToSend" value="Hello!"></textarea>
             </label>
         </form>
         <button id="fridayBLE-button5" class=" button button-positive  button-block " onclick="send()">Send</button>

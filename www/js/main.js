@@ -7,14 +7,15 @@ var ServiceUUID         = "FFE0";
 var CharacteristicUUID  = "FFE1";
 
 var HMDongle            = null;
-var messageBox;
+var messageToSend, messageReceived;
 
 function log(message)       { console.log(message); }
 function warn(message)      { alert(message); }
 
 function main()
 {
-    messageBox = document.getElementById("messageBox");
+    messageToSend   = document.getElementById("messageToSend");
+    messageReceived = document.getElementById("messageReceived");
 
     log("Scanning for " + ScanTime/1000 + " seconds");
     ble.startScan(
@@ -74,10 +75,10 @@ function bytesToString(buffer)  // ASCII only
 
 function onData(buffer)
 {
-    alert(bytesToString(buffer));
+    messageReceived.value += bytesToString(buffer);
 }
 
 function send()
 {
-    ble.write(HMDongle.id, ServiceUUID, CharacteristicUUID, stringToBytes(messageBox.value), function(){ log("Write success"); }, function() { warn("Write fail"); } );
+    ble.write(HMDongle.id, ServiceUUID, CharacteristicUUID, stringToBytes(messageToSend.value), function(){ log("Write success"); }, function() { warn("Write fail"); } );
 }
