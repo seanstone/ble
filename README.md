@@ -16,3 +16,11 @@ cd ble
 ionic state reset
 cordova platform add android
 ```
+
+### Build and run
+```
+cordova run android
+```
+
+### For debugging, use Chrome
+chrome://inspect
