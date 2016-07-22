@@ -1,1 +1,17 @@
-/* Empty. Add your own CSS if you like */
+#messageReceived, #messageToSend
+{
+    height:25vh;
+    width: 100%;
+    resize: none;
+    display:block;
+    overflow:auto;
+}
+
+#connect-status {
+   text-align: center;
+}
+
+#graph {
+    height: 30vh;
+    width:100vw;
+}

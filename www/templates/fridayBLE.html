@@ -1,19 +1,51 @@
-<style type="text/css">
-    #messageToSend, #messageReceived
-    {
-        height: 30vh;
-    }
-</style>
-
 <ion-view title="Friday BLE" id="page1" class=" ">
     <ion-content padding="true" class="has-header">
-        <div id="fridayBLE-button-bar1" class=" button-bar "></div>
-        <form id="fridayBLE-form3" class="list ">
-            <span class="input-label">Message received:</span><textarea id="messageReceived"></textarea>
-            <label class="item item-input " id="fridayBLE-textarea1">
-                <span class="input-label">Message to send:</span><textarea id="messageToSend" value="Hello!"></textarea>
-            </label>
-        </form>
-        <button id="fridayBLE-button5" class=" button button-positive  button-block " onclick="send()">Send</button>
+
+        <ul class="list">
+
+            <li class="item item-toggle">
+                <span id="connect-status">NOT CONNECTED</span>
+                <label id="scan-toggle" class="toggle toggle-energized">
+                    <input id="scan-toggle-check" type="checkbox" onclick="toggleScan()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <li class="item">
+                <div>Message received:</div>
+                <textarea id="messageReceived"></textarea>
+            </li>
+
+            <li class="item">
+                <div>Message to send:</div>
+                <textarea id="messageToSend" value="Hello!"></textarea>
+                <button class="button button-positive button-block" onclick="send()">Send</button>
+            </li>
+
+        </ul>
+
+        <!-- <div id="graph"></div> -->
+
     </ion-content>
 </ion-view>
+
+<!-- <ion-content ng-controller="ExampleController">
+    <div class="card">
+        <div class="item item-divider">
+            A line chart
+        </div>
+        <div class="item item-text-wrap">
+            <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+        </div>
+    </div>
+    <div class="card">
+        <div class="item item-divider">
+            A bar chart
+        </div>
+        <div class="item item-text-wrap">
+            <canvas id="bar" class="chart chart-bar" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+        </div>
+    </div>
+</ion-content> -->
